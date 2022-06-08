@@ -4,6 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/app_padding"
     tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/tvNombreylogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:gravity="center"
+        android:textSize="@dimen/app_name"
+        android:layout_marginTop="@dimen/app_logo"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/etEmailLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/login_activity"
+        app:layout_constraintTop_toBottomOf="@id/tvNombreylogo"
+        android:gravity="center" />
+
+    <EditText
+        android:id="@+id/etPasswordLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/app_logo"
+        app:layout_constraintTop_toBottomOf="@id/etEmailLogin"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/btnIniciarSesionLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_Iniciar_Sesion"
+        app:layout_constraintTop_toBottomOf="@id/etPasswordLogin"
+        android:layout_marginTop="@dimen/app_logo" />
+
+
+    <!--- Crear OnClick en LinearLayout para ir a RegisterActivity -->
+    <LinearLayout
+        android:id="@+id/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="¿No tienes una cuenta?" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:text="REGÍSTRATE"
+            android:textColor="#252837" />
+    </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ZoomCars</string>
+    <string name="btn_Iniciar_Sesion">Iniciar Sesión</string>
 </resources>
