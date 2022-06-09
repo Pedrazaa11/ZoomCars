@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "855374690420",
+    "project_id": "zoomcars-d4627",
+    "storage_bucket": "zoomcars-d4627.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855374690420:android:c45dcf6402f83101a03921",
+        "android_client_info": {
+          "package_name": "com.dam.zoomcars"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855374690420-e7p84mk0fal51nct19cls75kt1l8k309.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw7ZVsgLbDpUgCh_icC-YXgmqipG8nH6Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855374690420-e7p84mk0fal51nct19cls75kt1l8k309.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

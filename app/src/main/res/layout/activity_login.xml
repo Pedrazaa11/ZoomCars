@@ -38,16 +38,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_Iniciar_Sesion"
+        android:onClick="login"
         app:layout_constraintTop_toBottomOf="@id/etPasswordLogin"
         android:layout_marginTop="@dimen/app_logo" />
 
 
     <!--- Crear OnClick en LinearLayout para ir a RegisterActivity -->
     <LinearLayout
-        android:id="@+id/signUp"
+        android:id="@+id/llLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
+        android:onClick="irSignup"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
