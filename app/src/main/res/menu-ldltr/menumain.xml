@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    tools:ignore="MissingDefaultResource">
+    <!--- Mirar error linea arriba -->
+
+    <item android:id="@+id/MisVH"
+        android:title="Mis Vehículos"/>
+
+    <item android:id="@+id/MisChats"
+        android:title="Mis Chats"/>
+
+    <item android:id="@+id/MiPerfil"
+        android:title="Mi Perfil"/>
+
+    <item android:id="@+id/Tutorial"
+        android:title="Tutorial"/>
+
+    <item android:id="@+id/SNosotros"
+        android:title="Sobre Nosotros"/>
+
+    <item android:id="@+id/CSesion"
+        android:title="Cerrrar Sesión"/>
+
+
+
+</menu>
