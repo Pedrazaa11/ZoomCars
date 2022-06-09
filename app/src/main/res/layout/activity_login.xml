@@ -22,16 +22,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/login_activity"
+        android:hint="Introduce Email"
         app:layout_constraintTop_toBottomOf="@id/tvNombreylogo"
-        android:gravity="center" />
+        />
 
     <EditText
         android:id="@+id/etPasswordLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/app_logo"
+        android:hint="Introduce tu contraseña"
         app:layout_constraintTop_toBottomOf="@id/etEmailLogin"
-        android:gravity="center" />
+        />
 
     <Button
         android:id="@+id/btnIniciarSesionLogin"
