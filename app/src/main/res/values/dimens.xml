@@ -4,4 +4,5 @@
     <dimen name="app_name">24sp</dimen>
     <dimen name="login_activity">100dp</dimen>
     <dimen name="app_logo">50dp</dimen>
+    <dimen name="register_activity">75dp</dimen>
 </resources>
