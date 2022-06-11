@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
     tools:ignore="MissingDefaultResource">
     <!--- Mirar error linea arriba -->
@@ -15,7 +16,14 @@
         android:title="Mi Perfil"/>
 
     <item android:id="@+id/Tutorial"
-        android:title="Tutorial"/>
+        android:title="Tutorial"
+        android:icon="@android:drawable/ic_menu_info_details"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/Buscar"
+        android:title="Buscar"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="always"/>
 
     <item android:id="@+id/SNosotros"
         android:title="Sobre Nosotros"/>
