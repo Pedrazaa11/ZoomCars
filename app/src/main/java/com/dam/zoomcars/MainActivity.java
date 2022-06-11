@@ -21,6 +21,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void IrTutorial(View v) {
+        Intent i = new Intent(this, TutorialActivity.class);
+        startActivity(i);
+    }
+
+    public void IrInfo(View v) {
+        Intent i = new Intent(this, InfoActivity.class);
+        startActivity(i);
+    }
+
     public void salirApp(View v) {
         finish();
     }
@@ -48,6 +58,20 @@ public class MainActivity extends AppCompatActivity {
         if (id==R.id.MiPerfil) {
             IrMiPerfil(null);
             return true;
+        }
+
+        if (id==R.id.Tutorial) {
+            IrTutorial(null);
+            return true;
+        }
+
+        if (id==R.id.SNosotros) {
+            IrInfo(null);
+            return true;
+        }
+
+        if (id==R.id.CSesion) {
+            salirApp(null);
         }
 
         return super.onOptionsItemSelected(opcion_menu);
