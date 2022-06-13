@@ -5,10 +5,159 @@
     android:layout_height="match_parent"
     tools:context=".fragments.AñadirVhFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content" >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llBanner"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical">
+
+            <!---- Añadir img logo, añadir background-->
+
+            <TextView
+                android:id="@+id/tvEventAñadir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Publica tu vehiculo"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/etInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="¡Sube tu coche a ZoomCars!"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llContainerEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/etMarcaVH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Marca del vehiculo" />
+
+            <EditText
+                android:id="@+id/etModeloVH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:hint="Modelo del vehiculo" />
+
+            <EditText
+                android:id="@+id/etAñoVH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:hint="Año de fabricación del vehiculo" />
+
+            <EditText
+                android:id="@+id/etCvVH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:hint="CV del vehiculo" />
+
+            <EditText
+                android:id="@+id/etPuertasVH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:hint="Puertas del vehiculo" />
+
+            <EditText
+                android:id="@+id/etCombustibleVH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:hint="Tipo de combustuible del vehiculo" />
+
+            <EditText
+                android:id="@+id/etMarchasVH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:hint="¿Automatico o Manual?, se puede cambiar por radio buttons" />
+
+            <EditText
+                android:id="@+id/etKmVH"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:hint="Kilometraje del vehiculo" />
+
+
+            <EditText
+                android:id="@+id/etDescripcionEvento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:hint="Descripción del vehiculo" />
+
+
+
+
+            <LinearLayout
+                android:id="@+id/llFoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ibAdjuntarFoto"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                     />
+                <!---- Añadir imagien de camara (logo)-->
+
+                <ImageView
+                    android:id="@+id/ivFotoEvento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnPostEvent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+
+                android:text="Publicar Evento"
+                android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </FrameLayout>
