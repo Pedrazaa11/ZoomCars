@@ -82,7 +82,7 @@ public class MisCochesActivity extends AppCompatActivity {
                         Coche coche = cocheList.get(i);
 
                         Intent intentDatos = new Intent(MisCochesActivity.this, CocheDetailActivity.class);
-                        intentDatos.putExtra("EVENTO", coche);
+                        intentDatos.putExtra("COCHE", coche);
                         intentDatos.putExtra("PUBLISHER_ID", coche.getId());
                         startActivity(intentDatos);
 
