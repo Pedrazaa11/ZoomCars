@@ -4,4 +4,8 @@
     <string name="btn_Registrar">Registrar</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_aboutus_desc">ZoomCars es una app hecha para el ciclo de Desarrollo de Aplicaciones Multiplataforma de la Universidad Europea de Madrid, desarrollada con el fin de facilitar la venta de vehículos de segunda mano a cualquiera que quiera usar nuestra App.</string>
+    <string name="tv_SobreNosotros_P1">Ignacio Barbeyto Madruga</string>
+    <string name="tv_SobreNosotros_P2">Jorge García Pedraza</string>
+    <string name="tv_SobreNosotros_P3">Lucas</string>
 </resources>

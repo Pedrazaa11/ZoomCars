@@ -3,11 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GitHub/ZoomCars/app/src/main/res/font/nunito_sans.xml" value="0.284375" />
+        <entry key="..\:/GitHub/ZoomCars/app/src/main/res/layout/activity_chat.xml" value="0.25416666666666665" />
+        <entry key="..\:/GitHub/ZoomCars/app/src/main/res/layout/activity_info.xml" value="0.25416666666666665" />
         <entry key="..\:/GitHub/ZoomCars/app/src/main/res/layout/activity_login.xml" value="0.23143115942028986" />
         <entry key="..\:/GitHub/ZoomCars/app/src/main/res/layout/activity_main.xml" value="0.23143115942028986" />
         <entry key="..\:/GitHub/ZoomCars/app/src/main/res/layout/activity_mi_perfil.xml" value="0.25416666666666665" />
         <entry key="..\:/GitHub/ZoomCars/app/src/main/res/layout/activity_register.xml" value="0.23143115942028986" />
+        <entry key="..\:/GitHub/ZoomCars/app/src/main/res/layout/fragment_aniadir_vh.xml" value="0.25416666666666665" />
         <entry key="..\:/GitHub/ZoomCars/app/src/main/res/layout/tool_bar.xml" value="0.25416666666666665" />
+        <entry key="..\:/GitHub/ZoomCars/app/src/main/res/menu-ldltr/Barra_Botton.xml" value="0.25416666666666665" />
+        <entry key="..\:/GitHub/ZoomCars/app/src/main/res/menu-ldltr/bottom_navview_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/GitHub/ZoomCars/app/src/main/res/menu-ldltr/menumain.xml" value="0.25416666666666665" />
       </map>
     </option>
