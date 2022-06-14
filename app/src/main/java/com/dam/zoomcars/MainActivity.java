@@ -1,6 +1,7 @@
 package com.dam.zoomcars;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
     public void IrMiPerfil(View v) {
@@ -31,8 +33,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void salirApp(View v) {
-        finish();
+    public void cerrarSesion(View v) {
+        Intent i = new Intent(this, LoginActivity.class);
+        startActivity(i);
     }
 
     @Override public boolean onCreateOptionsMenu(Menu mimenu) {
@@ -47,31 +50,31 @@ public class MainActivity extends AppCompatActivity {
 
         int id= opcion_menu.getItemId();
 
-        if (id==R.id.MisVH) {
+        if (id==R.id.nav_misvh) {
             return true;
         }
 
-        if (id==R.id.MisChats) {
+        if (id==R.id.nav_mischats) {
             return true;
         }
 
-        if (id==R.id.MiPerfil) {
+        if (id==R.id.nav_miperfil) {
             IrMiPerfil(null);
             return true;
         }
 
-        if (id==R.id.Tutorial) {
+        if (id==R.id.nav_tutorial) {
             IrTutorial(null);
             return true;
         }
 
-        if (id==R.id.SNosotros) {
+        if (id==R.id.nav_sobrenosotros) {
             IrInfo(null);
             return true;
         }
 
-        if (id==R.id.CSesion) {
-            salirApp(null);
+        if (id==R.id.nav_cerrarsesion) {
+            cerrarSesion(null);
         }
 
         return super.onOptionsItemSelected(opcion_menu);

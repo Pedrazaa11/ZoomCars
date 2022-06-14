@@ -1,36 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainActivity"
-    tools:ignore="MissingDefaultResource">
-    <!--- Mirar error linea arriba -->
+    tools:showIn="navigation_view" >
 
-    <item android:id="@+id/MisVH"
-        android:title="Mis Vehículos"/>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_misvh"
+            android:title="Mis vehículos" />
 
-    <item android:id="@+id/MisChats"
-        android:title="Mis Chats"/>
+        <item
+            android:id="@+id/nav_mischats"
+            android:title="Mis chats" />
 
-    <item android:id="@+id/MiPerfil"
-        android:title="Mi Perfil"/>
+        <item
+            android:id="@+id/nav_miperfil"
+            android:title="Mi perfil" />
 
-    <item android:id="@+id/Tutorial"
-        android:title="Tutorial"
-        android:icon="@android:drawable/ic_menu_info_details"
-        app:showAsAction="ifRoom"/>
+        <item
+            android:id="@+id/nav_tutorial"
+            android:title="Tutorial" />
 
-    <item android:id="@+id/Buscar"
-        android:title="Buscar"
-        android:icon="@android:drawable/ic_menu_search"
-        app:showAsAction="always"/>
+        <item
+            android:id="@+id/nav_sobrenosotros"
+            android:title="Sobre nosotros" />
 
-    <item android:id="@+id/SNosotros"
-        android:title="Sobre Nosotros"/>
-
-    <item android:id="@+id/CSesion"
-        android:title="Cerrrar Sesión"/>
-
-
+        <item
+            android:id="@+id/nav_cerrarsesion"
+            android:title="Cerrar sesión" />
+    </group>
 
 </menu>
