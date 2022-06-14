@@ -40,8 +40,7 @@ public class AñadirVhFragment extends Fragment {
     StorageTask uploadTask;
     StorageReference storageReference;
 
-    EditText etMarca;
-    EditText etModelo;
+    EditText etMarcaModelo;
     EditText etAñoFab;
     EditText etCV;
     EditText etPuertas;
@@ -58,8 +57,7 @@ public class AñadirVhFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_aniadir_vh, container, false);
 
-        etMarca = view.findViewById(R.id.etMarcaVH);
-        etModelo = view.findViewById(R.id.etModeloVH);
+        etMarcaModelo = view.findViewById(R.id.etMarcaMVH);
         etAñoFab = view.findViewById(R.id.etAñoVH);
         etCV = view.findViewById(R.id.etCvVH);
         etPuertas = view.findViewById(R.id.etPuertasVH);
@@ -78,10 +76,8 @@ public class AñadirVhFragment extends Fragment {
         btnPostCoche.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (etMarca.getText().toString().isEmpty()){
-                    Toast.makeText(getContext(), "Debes escribir una marca de coche", Toast.LENGTH_SHORT).show();
-                }else if (etModelo.getText().toString().isEmpty()){
-                    Toast.makeText(getContext(), "Debes escribir un modelo de coche", Toast.LENGTH_SHORT).show();
+                if (etMarcaModelo.getText().toString().isEmpty()){
+                    Toast.makeText(getContext(), "Debes escribir una marca y modelo de coche", Toast.LENGTH_SHORT).show();
                 }else if (etAñoFab.getText().toString().isEmpty()){
                     Toast.makeText(getContext(), "Debes escribir un año de fabricacion del coche", Toast.LENGTH_SHORT).show();
                 }else if (etCV.getText().toString().isEmpty()){
@@ -151,14 +147,13 @@ public class AñadirVhFragment extends Fragment {
                         Uri downloadUri = task.getResult();
                         myUrl = downloadUri.toString();
 
-                        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Loops");
+                        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Coches");
 
                         String postId = reference.push().getKey();
 
                         HashMap<String, Object> hashMap = new HashMap<>();
                         hashMap.put("id", postId);
-                        hashMap.put("marca", etMarca.getText().toString());
-                        hashMap.put("modelo", etModelo.getText().toString());
+                        hashMap.put("marcamodelo", etMarcaModelo.getText().toString());
                         hashMap.put("añodefabricacion", etAñoFab.getText().toString());
                         hashMap.put("cv", etCV.getText().toString());
                         hashMap.put("puertas", etPuertas.getText().toString());

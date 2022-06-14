@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp">
+
+    <ImageView
+        android:id="@+id/ivImageEventoMC"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:src="@drawable/foto" />
+
+    <TextView
+        android:id="@+id/tvMarcaMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toEndOf="@id/ivImageEventoMC"
+        android:maxLines="2"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/ivImageEventoMC" />
+
+    <TextView
+        android:id="@+id/tvAñofabMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMarcaMC"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/ivImageEventoMC"
+        android:layout_toRightOf="@id/ivImageEventoMC"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/tvTipoCombusMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAñofabMC"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/ivImageEventoMC"
+        android:layout_toRightOf="@id/ivImageEventoMC"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/tvKmMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTipoCombusMC"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/ivImageEventoMC"
+        android:layout_toRightOf="@id/ivImageEventoMC"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/tvDescripcionMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvKmMC"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:maxLines="2"
+        android:layout_toEndOf="@id/ivImageEventoMC"
+        android:layout_toRightOf="@id/ivImageEventoMC"
+        android:layout_marginLeft="16dp" />
+
+
+
+
+</RelativeLayout>

@@ -49,19 +49,11 @@
             android:padding="16dp">
 
             <EditText
-                android:id="@+id/etMarcaVH"
+                android:id="@+id/etMarcaMVH"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:hint="Marca del vehiculo" />
-
-            <EditText
-                android:id="@+id/etModeloVH"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="16dp"
-                android:hint="Modelo del vehiculo" />
+                android:hint="Marca y modelo del vehiculo" />
 
             <EditText
                 android:id="@+id/etAñoVH"
