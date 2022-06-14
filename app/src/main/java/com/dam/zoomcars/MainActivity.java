@@ -30,8 +30,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
-        setSupportActionBar(toolbar);
 
         /*getSupportFragmentManager().beginTransaction().replace(R.id.nav).commit();
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.);
@@ -45,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
@@ -67,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menumain, menu);
+        getMenuInflater().inflate(R.menu.activity_main_drawer, menu);
         return true;
     }
 
@@ -75,11 +73,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_misvh:
-                Intent i = new Intent(MainActivity.this, MisVhActivity.class);
+                Intent i = new Intent(this, MisCochesActivity.class);
                 startActivity(i);
                 break;
             case R.id.nav_mischats:
-                Intent i2 = new Intent(MainActivity.this, MisChatsActivity.class);
+                Intent i2 = new Intent(this, MisChatsActivity.class);
                 startActivity(i2);
                 break;
             case R.id.nav_miperfil:
