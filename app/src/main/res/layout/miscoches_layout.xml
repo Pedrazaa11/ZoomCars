@@ -7,8 +7,8 @@
     <ImageView
         android:id="@+id/ivImageEventoMC"
         android:layout_width="125dp"
-        android:layout_height="125dp"
-        android:src="@drawable/foto" />
+        android:layout_height="125dp"/>
+        <!--android:src="@drawable/foto"-->
 
     <TextView
         android:id="@+id/tvMarcaMC"
