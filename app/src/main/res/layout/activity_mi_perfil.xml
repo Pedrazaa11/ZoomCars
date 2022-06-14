@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/app_padding"
     tools:context=".MiPerfilActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
 
         <TextView
             android:id="@+id/tvUsuarioM"
@@ -20,7 +22,7 @@
             android:textSize="32sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/nombreM"
@@ -43,27 +45,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/nombreM" />
 
-        <TextView
-            android:id="@+id/bio"
+        <Button
+            android:id="@+id/btnEditperfilM"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Sobre mi:"
-            app:layout_constraintEnd_toEndOf="@id/tvUsuarioM"
-            app:layout_constraintStart_toStartOf="@id/tvUsuarioM"
-            app:layout_constraintTop_toBottomOf="@id/tvNombreM" />
-
-        <TextView
-            android:id="@+id/tvBio"
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Sobre mi"
-            android:textSize="18sp"
-            android:layout_marginBottom="32dp"
+            android:layout_height="match_parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/bio" />
+            android:layout_marginTop="@dimen/app_padding"
+            android:text="Editar Perfil"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/tvNombreM" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
