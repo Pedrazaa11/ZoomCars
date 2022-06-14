@@ -18,8 +18,7 @@
                 android:id="@+id/ivCocheFotoCD"
                 android:layout_width="match_parent"
                 android:layout_height="230dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/foto" />
+                android:scaleType="centerCrop" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/clDetailContainer"
