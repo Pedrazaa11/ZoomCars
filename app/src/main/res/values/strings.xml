@@ -8,4 +8,7 @@
     <string name="tv_SobreNosotros_P1">Ignacio Barbeyto Madruga</string>
     <string name="tv_SobreNosotros_P2">Jorge García Pedraza</string>
     <string name="tv_SobreNosotros_P3">Lucas</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

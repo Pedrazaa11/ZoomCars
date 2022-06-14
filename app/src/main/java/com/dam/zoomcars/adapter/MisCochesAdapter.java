@@ -30,7 +30,7 @@ public class MisCochesAdapter extends RecyclerView.Adapter<MisCochesAdapter.Coch
         this.mPosts = mPosts;
     }
 
-    public void setListener(View.OnClickListener listener){ this.listener = listener;}
+    public static void setListener(View.OnClickListener listener){ this.listener = listener;}
 
     @NonNull
     @Override
