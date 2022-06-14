@@ -65,7 +65,7 @@ public class MisCochesActivity extends AppCompatActivity {
         query.addListenerForSingleValueEvent(valueEventListener);
     }
 
-    ValueEventListener valueEventListener = new ValueEventListener() {
+    final ValueEventListener valueEventListener = new ValueEventListener() {
         @Override
         public void onDataChange(@NonNull DataSnapshot snapshot) {
             myCoches.clear();
@@ -75,7 +75,7 @@ public class MisCochesActivity extends AppCompatActivity {
                     cocheList.add(coche);
                 }
 
-                MisCochesAdapter.setListener(new View.OnClickListener() {
+                misCochesAdapter.setListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         int i = rvMisCoches.getChildAdapterPosition(v);

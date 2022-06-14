@@ -1,9 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CocheDetailActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivCocheFotoCD"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/foto" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clDetailContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivCocheFotoCD"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/tvMarcamCD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre del coche"
+                    android:textSize="32sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvAñofabCD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvMarcamCD" />
+
+                <TextView
+                    android:id="@+id/tvCVCD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvAñofabCD" />
+
+                <TextView
+                    android:id="@+id/tvKmCD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvCVCD" />
+
+                <TextView
+                    android:id="@+id/tvPuertasCD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvKmCD" />
+
+                <TextView
+                    android:id="@+id/tvMarchasCD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvPuertasCD" />
+
+                <TextView
+                    android:id="@+id/tvCombusCD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvMarchasCD" />
+
+                <TextView
+                    android:id="@+id/tvDescripcionCD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@id/tvCombusCD" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnEnviarMensajeCD"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Enviar un mensaje"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvDescripcionCD" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

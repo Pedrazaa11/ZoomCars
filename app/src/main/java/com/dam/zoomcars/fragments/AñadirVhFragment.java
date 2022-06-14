@@ -17,6 +17,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.dam.zoomcars.MainActivity;
 import com.dam.zoomcars.R;
 import com.google.android.gms.tasks.Continuation;
@@ -26,6 +27,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.annotations.Nullable;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
@@ -112,17 +114,17 @@ public class AñadirVhFragment extends Fragment {
 
 
     //TODO: metodo para pasar la imagen a Ploopfragment
-   /* @Override
+    @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1 && resultCode == Activity.RESULT_OK) {
             // Cargamos la imagen seleccionada en el ImageView
             imageUri = data.getData();
-            Glide.with(ivFotoEvento.getContext()).load(imageUri)
-                    .into(ivFotoEvento);
+            Glide.with(ivFotoCoche.getContext()).load(imageUri)
+                    .into(ivFotoCoche);
         }
 
-    } */
+    }
 
     private void uploadImage() {
         ProgressDialog progressDialog = new ProgressDialog(getContext());

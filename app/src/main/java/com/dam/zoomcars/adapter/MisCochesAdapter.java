@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.dam.zoomcars.R;
 import com.dam.zoomcars.model.Coche;
 import com.google.firebase.auth.FirebaseAuth;
@@ -32,6 +34,13 @@ public class MisCochesAdapter extends RecyclerView.Adapter<MisCochesAdapter.Coch
 
     public void setListener(View.OnClickListener listener){ this.listener = listener;}
 
+    @Override
+    public void onClick(View v) {
+        if (listener != null) {
+            listener.onClick(v);
+        }
+    }
+
     @NonNull
     @Override
     public CochesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -46,9 +55,9 @@ public class MisCochesAdapter extends RecyclerView.Adapter<MisCochesAdapter.Coch
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         Coche coch = mPosts.get(position);
 
-       /* Glide.with(mContext).load(event.getImageUrl())
+        Glide.with(mContext).load(coch.getImageURL())
                 .apply(new RequestOptions().placeholder(R.mipmap.ic_launcher))
-                .into(holder.ivImageEvento);*/
+                .into(holder.ivImageCoche);
 
         if (coch.getDescripcion().equals("")){
             holder.tvMarcaModelo.setVisibility(View.GONE);
@@ -68,12 +77,7 @@ public class MisCochesAdapter extends RecyclerView.Adapter<MisCochesAdapter.Coch
         return mPosts.size();
     }
 
-    @Override
-    public void onClick(View v) {
-        if (listener != null) {
-            listener.onClick(v);
-        }
-    }
+
 
     public class CochesViewHolder extends RecyclerView.ViewHolder{
 
