@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/nav_header"
-    android:layout_width="match_parent"
-    android:layout_height="160dp"
-    android:background="@color/design_default_color_primary"
-    android:clickable="true"
-    android:focusable="true"
-    android:foreground="?attr/selectableItemBackgroundBorderless"
-    android:gravity="bottom"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <ImageView
-        android:id="@+id/nav_header_imageView"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:src="@mipmap/ic_launcher" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:background="@android:color/holo_blue_dark">
 
     <TextView
-        android:id="@+id/nav_header_textView"
+        android:id="@+id/header_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="16dp"
-        android:text="Chike Mgbemena"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-</LinearLayout>
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:drawablePadding="12dp"
+        android:gravity="center_vertical"
+        android:text="@string/app_name"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
+        app:drawableStartCompat="@mipmap/ic_launcher"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:text="@string/copyright"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+        app:layout_constraintEnd_toEndOf="@+id/header_title"
+        app:layout_constraintStart_toStartOf="@+id/header_title"
+        app:layout_constraintTop_toBottomOf="@+id/header_title" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
