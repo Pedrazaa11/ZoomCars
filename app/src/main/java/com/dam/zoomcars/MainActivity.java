@@ -107,45 +107,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-*/
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        int title;
-        switch (menuItem.getItemId()) {
-            case R.id.nav_misvh:
-                title = R.string.;
-                break;
-            case R.id.nav_gallery:
-                title = R.string.menu_gallery;
-                break;
-            case R.id.nav_manage:
-                title = R.string.menu_tools;
-                break;
-            case R.id.nav_share:
-                title = R.string.menu_share;
-                break;
-            case R.id.nav_send:
-                title = R.string.menu_send;
-                break;
-            default:
-                throw new IllegalArgumentException("menu option not implemented!!");
-        }
-
-        Fragment fragment = HomeContentFragment.newInstance(getString(title));
-        getSupportFragmentManager()
-                .beginTransaction()
-                .setCustomAnimations(R.anim.nav_enter, R.anim.nav_exit)
-                .replace(R.id.home_content, fragment)
-                .commit();
-
-
-        setTitle(getString(title));
-
-        drawerLayout.closeDrawer(GravityCompat.START);
-
-        return true;
-    }
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
