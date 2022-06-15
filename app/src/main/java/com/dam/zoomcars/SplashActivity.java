@@ -8,6 +8,7 @@ import android.os.Handler;
 
 public class SplashActivity extends AppCompatActivity {
 
+    //Trabajo de TFC Uem Grupo 1
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
