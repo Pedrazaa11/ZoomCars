@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -21,13 +22,14 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,
+        DrawerLayout.DrawerListener{
 
     FirebaseAuth firebaseAuth;
     Toolbar toolbar;
 
-    private DrawerLayout drawerLayout;
 
+    private DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +42,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         drawerLayout = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawerLayout, toolbar, R.string.navigation_drawer_open,
+                R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+
+        NavigationView navigationView = findViewById(R.id.navigation_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        MenuItem menuItem = navigationView.getMenu().getItem(0);
+        onNavigationItemSelected(menuItem);
+        menuItem.setChecked(true);
+
+        drawerLayout.addDrawerListener(this);
+
+        View header = navigationView.getHeaderView(0);
+        header.findViewById(R.id.header_title).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, getString(R.string.title_click),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -55,15 +76,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.activity_main_drawer, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        int title;
+        switch (menuItem.getItemId()) {
             case R.id.nav_misvh:
                 Intent i = new Intent(MainActivity.this, MisCochesActivity.class);
                 startActivity(i);
@@ -100,15 +115,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
         }
 
-        DrawerLayout drawer=(DrawerLayout)findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+        drawerLayout.closeDrawer(GravityCompat.START);
+
         return true;
     }
 
+    @Override
+    public void onDrawerSlide(@NonNull View view, float v) {
+        //cambio en la posición del drawer
+    }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+    public void onDrawerOpened(@NonNull View view) {
+        //el drawer se ha abierto completamente
+        Toast.makeText(this, getString(R.string.navigation_drawer_open),
+                Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onDrawerClosed(@NonNull View view) {
+        //el drawer se ha cerrado completamente
+    }
+
+    @Override
+    public void onDrawerStateChanged(int i) {
+        //cambio de estado, puede ser STATE_IDLE, STATE_DRAGGING or STATE_SETTLING
     }
 
 }
