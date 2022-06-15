@@ -93,7 +93,6 @@ public class RegisterActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
                                         pd.dismiss();
-                                        //TODO:Podria cambiarse al tutorial activity, en vez de al main activity
                                         Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                         startActivity(intent);
@@ -116,7 +115,6 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void irMain(View view) {
-        //TODO:Podria cambiarse al tutorial activity, en vez de al main activity
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
     }

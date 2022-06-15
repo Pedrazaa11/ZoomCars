@@ -24,6 +24,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     FirebaseAuth firebaseAuth;
+    Toolbar toolbar;
 
     private DrawerLayout drawerLayout;
 
@@ -34,7 +35,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+        setSupportActionBar(toolbar);
+
 
         drawerLayout = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -63,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_misvh:
-                Intent i = new Intent(MainActivity.this, activity.class);
+                Intent i = new Intent(MainActivity.this, MisCochesActivity.class);
                 startActivity(i);
                 break;
             case R.id.nav_mischats:
@@ -73,10 +75,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_miperfil:
                 Intent i3 = new Intent(this, MiPerfilActivity.class);
                 startActivity(i3);
-                break;
-            case R.id.nav_tutorial:
-                Intent i4 = new Intent(this, TutorialActivity.class);
-                startActivity(i4);
                 break;
             case R.id.nav_sobrenosotros:
                 Intent i5 = new Intent(MainActivity.this, InfoActivity.class);
