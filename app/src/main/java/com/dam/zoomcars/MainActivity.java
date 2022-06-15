@@ -36,9 +36,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
 
         drawerLayout = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -80,20 +77,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int title;
         switch (menuItem.getItemId()) {
             case R.id.nav_misvh:
-                Intent i = new Intent(MainActivity.this, MisCochesActivity.class);
-                startActivity(i);
+                //Intent i = new Intent(MainActivity.this, MisCochesActivity.class);
+                //startActivity(i);
                 break;
             case R.id.nav_mischats:
                 Intent i2 = new Intent(MainActivity.this, MisChatsActivity.class);
                 startActivity(i2);
                 break;
             case R.id.nav_miperfil:
-                Intent i3 = new Intent(this, MiPerfilActivity.class);
-                startActivity(i3);
+                //Intent i3 = new Intent(this, MiPerfilActivity.class);
+                //startActivity(i3);
                 break;
             case R.id.nav_sobrenosotros:
-                Intent i5 = new Intent(MainActivity.this, InfoActivity.class);
-                startActivity(i5);
+                //Intent i4 = new Intent(MainActivity.this, InfoActivity.class);
+                //startActivity(i4);
                 break;
             case R.id.nav_cerrarsesion:
                 MaterialAlertDialogBuilder alertDialog = new MaterialAlertDialogBuilder(MainActivity.this);
