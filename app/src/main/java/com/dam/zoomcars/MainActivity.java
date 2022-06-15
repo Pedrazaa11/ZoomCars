@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.dam.zoomcars.fragments.AñadirVhFragment;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
@@ -87,6 +88,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_miperfil:
                 //Intent i3 = new Intent(this, MiPerfilActivity.class);
                 //startActivity(i3);
+                break;
+            case  R.id.nav_añadirVh:
+                Intent i4 = new Intent(this, AñadirVhFragment.class);
+                startActivity(i4);
                 break;
             case R.id.nav_sobrenosotros:
                 //Intent i4 = new Intent(MainActivity.this, InfoActivity.class);
